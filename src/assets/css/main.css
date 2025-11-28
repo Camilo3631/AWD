@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+
+
+body {
+    font-family: 'Manrope', sans-serif;
+
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    width: 1ch;
+    /* ancho de un carácter */
+    animation: blink 1s infinite;
+    vertical-align: bottom;
+}
+
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+/* Modo claro */
+body.light {
+    background-color: #e2e8f0;
+    /* gris claro */
+    color: #3e424a;
+    /* negro */
+}
+
+/* Modo oscuro */
+body.dark {
+    background-color: #1a202c;
+    /* gris oscuro */
+    color: #f8f9fa;
+    /* blanco */
+}
