@@ -2,7 +2,7 @@
     "header.home": "Inicio",
     "header.poryects": "Proyectos",
     "header.contac": "Contacto",
-    "heroText1": "Hola, soy Camilo Acosta.",
+    "heroText1": "Hola, soy Camilo Acosta",
     "heroText2": "Desarrollador Front-end en formación, creando experiencias digitales elegantes y funcionales.",
     "feature.proyects": "Proyectos destacados",
     "projects.viewLive": "Ver en vivo",
@@ -10,5 +10,9 @@
     "projects.invierno-title": "Invierno - Demo de Front-end de E-commerce",
     "proyects.invierno.description": "Catálogo de productos con búsqueda, selector de idioma (ES/EN,PL) y carrito simulado. Construido con HTML, Bootstrap y JavaScript vanilla",
     "projects.kino-title": "KinoliveStart - App de Películas",
-    "proyects.kino.description": "Descubre películas con filtros por género y búsqueda avanzada. Construido con HTML, Bootstrap y JavaScript vanilla. Desliza hacia abajo para explorar más secciones. Selector de idioma (ES/EN/PL/FR)"
+    "proyects.kino.description": "Descubre películas con filtros por género y búsqueda avanzada. Construido con HTML, Bootstrap y JavaScript vanilla. Desliza hacia abajo para explorar más secciones. Selector de idioma (ES/EN/PL/FR)",
+    "footer.rights": "Todos los derechos reservados",
+    "footer.contact": "Contacto",
+    "footer.projects": "Projectos",
+    "footer.downloadCV": "Descargar CV"
 }

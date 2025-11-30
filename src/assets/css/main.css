@@ -7,7 +7,7 @@ body {
 
     font-weight: 400;
     font-style: normal;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .typewriter-cursor {
@@ -47,4 +47,8 @@ body.dark {
     /* gris oscuro */
     color: #f8f9fa;
     /* blanco */
+}
+
+::placeholder {
+    color: white;
 }
