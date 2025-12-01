@@ -14,5 +14,19 @@
     "footer.rights": "All rights reserved",
     "footer.contact": "Contact",
     "footer.projects": "Projects",
-    "footer.downloadCV": "Download CV"
+    "footer.downloadCV": "Download CV",
+    "from.email": "Email",
+    "from.name": "Name",
+    "from.contact": "Contact me",
+    "from.message": "Message",
+    "form.send": "Send",
+    "form.sending": "Sending...",
+    "form.errors.nameRequired": "Name is required",
+    "form.errors.emailRequired": "Email is required",
+    "form.errors.emailInvalid": "Email is invalid",
+    "form.errors.messageRequired": "Message is required",
+    "form.errors.messageMin": "Message must be at least 10 characters",
+    "form.success": "Thank you for contacting me. I will reply soon.",
+    "form.fail": "Error sending message. Please try again.",
+    "Projects": "Projects"
 }

@@ -1,8 +1,7 @@
 <template>
-
-
-
-
-<h2>HOLA</h2>
-    
+  <AWDprojets />
 </template>
+
+<script setup>
+import AWDprojets from '~/components/AWDprojects.vue';
+</script>
