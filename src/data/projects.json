@@ -8,7 +8,7 @@
         },
         "liveLink": "https://lingo-stars.vercel.app/",
         "gitLink": "https://github.com/Camilo3631/LingoStars",
-        "image": "img-proyects/LingoStarts.png"
+        "image": "/img-proyects/LingoStarts.png"
     },
     {
         "id": 2,
@@ -19,6 +19,6 @@
         },
         "liveLink": "https://cashhold.netlify.app/",
         "gitLink": "https://github.com/Camilo3631/Cashhold",
-        "image": "img-proyects/cashhold.png"
+        "image": "/img-proyects/cashhold.png"
     }
 ]

@@ -1,5 +1,7 @@
 <template>
+  <div class="mb-20"> <!--- Temporal -->
   <AWDprojets />
+  </div>
 </template>
 
 <script setup>
