@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "LingoStars",
+        "description": {
+            "es": "Aplicación desarrollada con Vue 3 y TailwindCSS para aprender idiomas",
+            "en": "Application built with Vue 3 and TailwindCSS to learn languages"
+        },
+        "liveLink": "https://lingo-stars.vercel.app/",
+        "gitLink": "https://github.com/Camilo3631/LingoStars",
+        "image": "img-proyects/LingoStarts.png"
+    },
+    {
+        "id": 2,
+        "name": "CashHold",
+        "description": {
+            "es": "Aplicación desarrollada con Vue 3 y TailwindCSS para el control de gastos",
+            "en": "Application built with Vue 3 and TailwindCSS for expense tracking"
+        },
+        "liveLink": "https://cashhold.netlify.app/",
+        "gitLink": "https://github.com/Camilo3631/Cashhold",
+        "image": "img-proyects/cashhold.png"
+    }
+]

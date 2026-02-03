@@ -43,7 +43,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
@@ -53,22 +53,24 @@ const texts = [ t('heroText1') ]
 const typingSpeed = 100
 const pauseBetweenTexts = 1500
 
-function typeWriterLoop(el, texts, speed, pause) {
+let timeoutId = []
+
+const  typeWriterLoop = (el, texts, speed, pause) => {
   let textIndex = 0
 
-  function typeText(text, i = 0) {
+  const typeText = (text, i = 0) => {
     if (i < text.length) {
       el.textContent += text[i]
-      setTimeout(() => typeText(text, i + 1), speed)
+      timeoutId = setTimeout(() => typeText(text, i + 1), speed)
     } else {
-      setTimeout(() => deleteText(text), pause)
+     timeoutId = setTimeout(() => deleteText(text), pause)
     }
   }
 
-  function deleteText(text, i = text.length - 1) {
+  const  deleteText = (text, i = text.length - 1) => {
     if (i >= 0) {
       el.textContent = text.substring(0, i)
-      setTimeout(() => deleteText(text, i - 1), speed / 2)
+       timeoutId = setTimeout(() => deleteText(text, i - 1), speed / 2)
     } else {
       textIndex = (textIndex + 1) % texts.length
       typeText(texts[textIndex])
@@ -82,6 +84,11 @@ onMounted(() => {
   if (typewriter.value) {
     typeWriterLoop(typewriter.value, texts, typingSpeed, pauseBetweenTexts)
   }
+})
+
+onUnmounted(() => {
+  // Limpiar todos los timeouts
+  if (timeoutId) clearTimeout(timeoutId)
 })
 </script>
 

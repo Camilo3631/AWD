@@ -64,12 +64,14 @@
 
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const isDay = ref(true)
 const projects = ref([])
+
+let observer = null
 
 // Generar 30 proyectos de ejemplo
 for (let i = 1; i <= 30; i++) {
@@ -101,9 +103,13 @@ function goToPage(page) {
 // Detectar tema
 onMounted(() => {
   isDay.value = document.body.classList.contains('light')
-  const observer = new MutationObserver(() => {
+  observer = new MutationObserver(() => {
     isDay.value = document.body.classList.contains('light')
   })
   observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+})
+
+onUnmounted(() => {
+  if (observer) observer.disconnect()
 })
 </script>

@@ -10,7 +10,7 @@
       <div class="flex">
         <div class="flex flex-col p-6 border rounded-lg shadow-md text-center  min-h-[400px] mb-10 mt-12">
          <img :src="imgInvierno" alt="proyecto 1" class="rounded-lg mb-4 w-full h-auto mx-auto" />
-          <h3 class="text-xl font-semibold mb-">{{ $t('projects.invierno-title') }}</h3>
+          <h3 class="text-xl font-semibold mb-3">{{ $t('projects.invierno-title') }}</h3>
           <p class="mb-4 text-xl">{{ $t('proyects.invierno.description') }}</p>
            <div class="mt-auto flex justify-center items-center gap-3">
              <!-- Botón Live -->
@@ -75,21 +75,24 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import imgInvierno from '~/assets/e-comerce-642.jpg'
 import imgkino from '~/assets/Kino-642.jpg'
-const { t } = useI18n()
 
+const { t } = useI18n()
 const isDay = ref(true)
+
+// Observer declarado fuera para poder desconectarlo
+let observer = null
 
 onMounted(() => {
   // Verificar tema al cargar
   isDay.value = document.body.classList.contains('light')
 
   // Observar cambios en el <body>
-  const observer = new MutationObserver(() => {
+  observer = new MutationObserver(() => {
     isDay.value = document.body.classList.contains('light')
   })
 
@@ -99,4 +102,10 @@ onMounted(() => {
   })
 })
 
+onUnmounted(() => {
+   // Limpiar observer al desmontar
+   if (observer) observer.disconnect()
+
+  
+})
 </script>

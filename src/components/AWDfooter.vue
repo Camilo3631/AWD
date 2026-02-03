@@ -15,7 +15,7 @@
         </ul>
 
         <!-- Botón CV compacto y redondeado -->
-        <a href="/Kamil_Acosta_CV.pdf" download
+        <a href="/cv2.pdf" download
            class="bg-gray-300 hover:bg-gray-400 text-lg text-black font-semibold py-2 px-1.5 rounded-md transition-colors">
           {{ $t('footer.downloadCV') }}
         </a>
