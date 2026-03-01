@@ -6,6 +6,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: "src/",
 
+  ssr: false,
+
   modules: [
     '@nuxt/content',
     '@nuxt/image',

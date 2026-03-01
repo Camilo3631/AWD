@@ -3,7 +3,9 @@
     <div class="w-full p-4 flex items-center justify-between">
       <!-- Logo + navegación desktop -->
       <div class="flex items-center gap-8">
+         <NuxtLink to="/" class="cursor-pointer" @click="menuOpen = false">
         <img src="/logo.png" alt="AWD" class="h-14 w-14" />
+          </NuxtLink>
         <!-- Navegación desktop -->
         <nav class="hidden sm:block">
           <ul class="flex gap-6">
