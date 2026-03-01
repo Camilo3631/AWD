@@ -1,69 +1,74 @@
 <template>
-  <section class="max-w-xl mx-auto p-6 bg-gray-600 rounded-xl shadow-md mt-10 text-2xl">
-    <h1 class="text-2xl font-bold mb-6 text-center text-white">{{ $t('from.contact') }}</h1>
+   <section class="max-w-2xl mx-auto p-8 bg-gray-600 rounded-xl shadow-md mt-10 text-2xl">
+     <h1 class="text-3xl font-bold mb-8 text-center text-white">{{ $t('from.contact') }}</h1>
 
-    <form
-      :action="formspreeURL"
+     <form
+      :action="formspreeURL" 
       method="POST"
       @submit.prevent="handleSubmit"
-      class="space-y-4"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- Nombre -->
-        <div>
-          <label for="name" class="block text-sm font-medium text-white">{{ $t('from.name') }}</label>
-          <input
-            type="text"
-            id="name"
-            v-model="form.name"
-            placeholder="Tu nombre"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          />
-          <p v-if="errors.name" class="text-red-600 text-sm mt-1">{{ errors.name }}</p>
-        </div>
+      class="space-y-6"
+      >
 
-        <!-- Correo -->
-        <div>
-          <label for="email" class="block text-sm font-medium text-white">{{ $t('from.email') }}</label>
-          <input
-            type="email"
-            id="email"
-            v-model="form.email"
-            placeholder="correo@ejemplo.com"
-            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        
+       <!-- Nombre -->
+      <div>
+        <label for="name" class="block text-lg font-medium text-white mb-2">{{ $t('from.name') }}</label>
+        <input
+          type="text"
+          v-model="form.name"
+          class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 focus:border-indigo-500 focus:ring-indigo-500
+          text-lg"
           />
-          <p v-if="errors.email" class="text-red-600 text-sm mt-1">{{ errors.email }}</p>
-        </div>
+          <p v-if="errors.name" class="text-red-600 text-sm mt-2">{{ errors.name }}</p>
+      </div>
+
+      <!-- Correo -->
+       <div>
+         <label for="email" class="block text-lg font-medium text-white mb-2">{{ $t('from.email') }}</label>
+         <input
+           type="email"
+           id="email"
+           v-model="form.email"
+           placeholder="correo@ejemplo.com"
+           class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 focus:border-indigo-500 focus:ring-indigo-500
+           text-xl"
+           />
+           <p v-if="errors.email" class="text-red-600 text-sm mt-2">{{ errors.email }}</p>
+       </div>
       </div>
 
       <!-- Mensaje -->
       <div>
-        <label for="message" class="block text-sm font-medium text-white">{{ $t('from.message') }}</label>
-        <textarea
-          id="message"
-          v-model="form.message"
-          rows="4"
-          placeholder="Escribe tu mensaje"
-          class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+       <label for="message" class="block text-lg font-medium text-white mb-2">{{ $t('from.message') }}</label>
+       <textarea
+        id="message"
+        v-model="form.message"
+        rows="6"
+        placeholder="Escribe tu mensaje"
+        class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3
+        focus:border-indigo-500 focus:ring-indigo-500 text-lg"
         ></textarea>
-        <p v-if="errors.message" class="text-red-600 text-sm mt-1">{{ errors.message }}</p>
+        <p v-if="errors.message" class="text-red-600 text-sm mt-2">{{ errors.message }}</p>
       </div>
 
-      <!-- Botón enviar -->
-      <div class="text-center">
-        <button
-          type="submit"
-          :disabled="isSubmitting"
-          class="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-        >
-          {{ isSubmitting ? $t('form.sending') : $t('form.send') }}
-        </button>
-      </div>
-    </form>
+         <!-- Botón enviar -->
+          <div class="text-center">
+            <button
+             type="submit"
+             :disabled="isSubmitting"
+             class="inline-flex justify-center py-3 px-8 border border-transparent shadow-sm
+             text-lg font-medium rounded-lg text-white bg-red-600 hover:bg-red-700
+             disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+             >
+             {{ isSubmitting ? $t('form.sending') :$t('form.send') }}
+          </button>
+        </div>  
+   </form>
 
-    <!-- Mensaje de éxito o error -->
-    <p v-if="successMessage" class="mt-4 text-green-600 text-center">{{ successMessage }}</p>
-  </section>
+   <p v-if="successMessage" class="mt-6 text-green-600 text-center text-lg">{{ successMessage }}</p>
+ </section>
 </template>
 
 <script setup>

@@ -3,10 +3,10 @@
         "id": 1,
         "name": "LingoStars",
         "description": {
-            "es": "Aplicación desarrollada con Vue 3 y TailwindCSS para aprender idiomas",
-            "en": "Application built with Vue 3 and TailwindCSS to learn languages"
+            "es": "App de aprendizaje de idiomas multilenguaje (6 idiomas) enfocada en la práctica de frases completas. Incluye sistema de vidas, progreso persistente guardado localmente y trofeo descargable al completar una ruta.",
+            "en": "Multilingual language learning app (6 languages) focused on full-sentence practice. Features a lives system, locally stored persistent progress, and a downloadable trophy upon route completion."
         },
-        "liveLink": "https://lingo-stars.vercel.app/",
+        "liveLink": "https://lingostrarts.netlify.app/",
         "gitLink": "https://github.com/Camilo3631/LingoStars",
         "image": "/img-proyects/LingoStarts.png"
     },
@@ -14,8 +14,8 @@
         "id": 2,
         "name": "CashHold",
         "description": {
-            "es": "Aplicación desarrollada con Vue 3 y TailwindCSS para el control de gastos",
-            "en": "Application built with Vue 3 and TailwindCSS for expense tracking"
+            "es": "Aplicación para el control de gastos personales con gestión de ingresos y egresos. Incluye balance automático, pantalla de carga y datos guardados localmente.",
+            "en": "Personal expense tracking application with income and expense management. Features automatic balance calculation, a loading screen, and locally stored data."
         },
         "liveLink": "https://cashhold.netlify.app/",
         "gitLink": "https://github.com/Camilo3631/Cashhold",
