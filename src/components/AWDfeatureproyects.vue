@@ -4,7 +4,7 @@
         {{ $t('feature.proyects') }}
       </h1> 
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
+      <div class="grid gird-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl px-6 sm:px-6">
 
         <!-- proyect 1-->
         <div class="flex">

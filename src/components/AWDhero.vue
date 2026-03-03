@@ -36,7 +36,7 @@
         <li class="bg-gray-500 text-white px-3 py-2 rounded text-center w-full text-xl">Web Components</li>
         <li class="bg-gray-500 text-white px-3 py-2 rounded text-center w-full text-xl">Consumo de API RESTfull</li>
         <li class="bg-gray-500 text-white px-3 py-2 rounded text-center w-full text-xl">SPA</li>
-        <li class="bg-gray-500 text-white px-3 py-2 rounded text-center w-full text-xl">Testing</li>
+        <li class="bg-gray-500 text-white px-3 py-2 rounded text-center w-full text-xl">Vue.js</li>
       </ul>
     </div>
   </section>
