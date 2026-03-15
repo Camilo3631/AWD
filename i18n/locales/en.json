@@ -28,5 +28,7 @@
     "form.errors.messageMin": "Message must be at least 10 characters",
     "form.success": "Thank you for contacting me. I will reply soon.",
     "form.fail": "Error sending message. Please try again.",
-    "Projects": "Projects"
+    "Projects": "Projects",
+    "placeholder.message": "Write your message",
+    "email_placeholder": "Email{'@'}example.com"
 }
