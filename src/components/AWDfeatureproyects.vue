@@ -78,8 +78,8 @@
   import { ref, onMounted, onUnmounted } from 'vue'
   import { useI18n } from 'vue-i18n'
 
-  import imgInvierno from '~/assets/e-comerce-642.jpg'
-  import imgkino from '~/assets/Kino-642.jpg'
+import imgInvierno from '@/assets/e-comerce-642.jpg'
+import imgkino from '@/assets/Kino-642.jpg'
 
   const { t } = useI18n()
   const isDay = ref(true)

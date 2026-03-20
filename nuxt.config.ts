@@ -18,20 +18,16 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    strategy: 'prefix',
     locales: [
       { code: 'es', name: 'Español', file: 'es.json' },
       { code: 'en', name: 'English', file: 'en.json' },
-    ],
-
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      alwaysRedirect: true
-    }
+    ]
   },
 
+
+
   css: ['~/assets/css/main.css'],
+
 
   vite: {
     plugins: [tailwindcss()]

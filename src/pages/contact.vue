@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center p-6">
-    <AWDfromctact />
+    <AWDfromcontact />
   </div>
 </template>
 
 <script setup lang="ts">
-import AWDfromctact from '~/components/AWDfromctact.vue';
+import AWDfromcontact from '@/components/AWDfromcontact.vue';
 </script>

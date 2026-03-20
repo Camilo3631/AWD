@@ -72,21 +72,25 @@
   </header>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script setup lang="ts">
+import { ref } from 'vue' // quitar defineExpose de aquí
 import { useI18n } from 'vue-i18n'
 import AWDswitch from './AWDswitch.vue'
 
-
+// i18n
 const { setLocale } = useI18n()
 
-const menuOpen = ref(false) // controla menú móvil
+// refs
+const menuOpen = ref(false)
 const isLight = ref(true)
-const currentLocale = ref('es')
+const currentLocale = ref<'es' | 'en'>('es')
 
+// Exponer menuOpen para que TypeScript lo reconozca en vm
+defineExpose({ menuOpen })
+
+// cambiar idioma
 const changeLanguage = () => {
   setLocale(currentLocale.value)
-  menuOpen.value = false // cierra menú móvil al cambiar idioma
+  menuOpen.value = false
 }
 </script>
- 
