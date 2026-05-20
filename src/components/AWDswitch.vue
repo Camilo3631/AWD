@@ -30,27 +30,37 @@ const emit = defineEmits(['update:modelValue'])
 
 const isOn = ref(true)
 
-const toggle = async () => {
-  isOn.value = !isOn.value
-  if (isOn.value) {
-    document.body.classList.add('light')
-    document.body.classList.remove('dark')
-    localStorage.setItem('theme', 'light')
-  } else {
-    document.body.classList.add('dark')
-    document.body.classList.remove('light')
-    localStorage.setItem('theme', 'dark')
-  }
+const applyTheme =  (theme: 'light' | 'dark') => {
+   document.body.classList.toggle('light', theme === 'light')
+   document.body.classList.toggle('dark', theme === 'dark')
 }
+
+
+const toggle = () => {
+     isOn.value = !isOn.value
+
+     const theme = isOn.value ? 'light'  : 'dark'
+     applyTheme(theme)
+     localStorage.setItem('theme', theme)
+}
+
 
 watch(() => isOn.value, (val) => emit('update:modelValue', val))
 
 onMounted(() => {
   const saved = localStorage.getItem('theme')
-  if (saved) isOn.value = saved === 'light'
-  else isOn.value = new Date().getHours() >= 6 && new Date().getHours() < 18
+
+  const theme = 
+    saved ||
+    (new Date().getHours() >= 6 && new Date().getHours() < 18
+     ? 'light'
+     : 'dark')
+
+     isOn.value = theme === 'light'
+
+     applyTheme(theme as 'light' | 'dark')
+
 })
 
-// 🔹 Esto es clave para que TS vea isOn y toggle en tests
 defineExpose({ isOn, toggle })
 </script>

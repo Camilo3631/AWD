@@ -15,7 +15,7 @@
         </ul>
 
         <!-- Botón CV compacto y redondeado -->
-        <a href="/cv2.pdf" download
+       <a href="/Camilo_Acosta_cv.pdf" download
            class="bg-gray-300 hover:bg-gray-400 text-lg text-black font-semibold py-2 px-1.5 rounded-md transition-colors">
           {{ $t('footer.downloadCV') }}
         </a>
@@ -45,4 +45,3 @@ const socialIcons = [
   { name: 'uil-linkedin-alt', link: 'https://www.linkedin.com/authwall?trk=gf&trkInfo=AQGDwM0brdfUdgAAAZrM8MMQSDujeVnAsiLfxPjtuWBUmwZ9DFr-cVIOt0YA0W07o6UXauJl0xjb3a5LwPPWwie2vY_Viy5lxgDcmKE8piCXMw_zEA3Pc4MOesHqMMPp_Cx3CD4=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fcamilo-acosta-400572231%2F' }
 ]
 </script>
-s
