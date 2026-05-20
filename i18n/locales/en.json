@@ -3,11 +3,7 @@
     "header.poryects": "Proyects",
     "header.contac": "Contact",
     "heroText1": "Hi, I am Camilo Acosta",
-<<<<<<< HEAD
     "heroText2": "Front-end Developer creating elegant and functional web applications.",
-=======
-    "heroText2": "Front-end Developer focused on creating elegant and functional web applications.",
->>>>>>> feature_i18n-locale
     "feature.proyects": "Feature projects",
     "projects.invierno-title": "Winter - E-commerce Front-end Demo",
     "proyects.invierno.description": "Product catalog with search, language selector (ES/EN/PL), and simulated shopping cart. Built with HTML, Bootstrap, and vanilla JavaScript",

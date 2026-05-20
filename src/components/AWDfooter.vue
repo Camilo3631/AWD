@@ -14,18 +14,10 @@
           </li>
         </ul>
 
-<<<<<<< HEAD
         <!-- Botón CV Compacto y redondeado -->
-         <a href="/Camilo_Acosta_cv.pdf" download class="flex justify-center items-center bg-gray-300 hover:bg-gray-400 text-base sm:text-lg text-black font-semibold py-2 px-4 sm:px-5 rounded-md transition-colors flex-shrink-0">
+         <a href="/Camilo_Acosta.pdf" download class="flex justify-center items-center bg-gray-300 hover:bg-gray-400 text-base sm:text-lg text-black font-semibold py-2 px-4 sm:px-5 rounded-md transition-colors flex-shrink-0">
           {{  $t('footer.downloadCV') }}
          </a>
-=======
-        <!-- Botón CV compacto y redondeado -->
-       <a href="/Camilo_Acosta_cv.pdf" download
-           class="bg-gray-300 hover:bg-gray-400 text-lg text-black font-semibold py-2 px-1.5 rounded-md transition-colors">
-          {{ $t('footer.downloadCV') }}
-        </a>
->>>>>>> feature_i18n-locale
       </div>
 
       <!-- Fila 2: Redes sociales centradas -->
@@ -53,8 +45,4 @@ const socialIcons = [
   { name: 'uil-github-alt', link: 'https://github.com/Camilo3631' },
   { name: 'uil-linkedin-alt', link: 'https://www.linkedin.com/in/camilo-acosta-molina-400572231/' }
 ]
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> feature_i18n-locale

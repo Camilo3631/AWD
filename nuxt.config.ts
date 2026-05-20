@@ -1,5 +1,4 @@
-// Imprimimos tailwindcss
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -7,6 +6,10 @@ export default defineNuxtConfig({
   srcDir: "src/",
 
   ssr: false,
+
+  nitro: {
+    preset: 'static'
+  },
 
   modules: [
     '@nuxt/content',
@@ -25,27 +28,25 @@ export default defineNuxtConfig({
     ]
   },
 
-
-
   css: ['~/assets/css/main.css'],
 
-
+  // 🔥 FIX IMPORTANTE
   vite: {
-    plugins: [tailwindcss()]
+    plugins: process.env.NODE_ENV === 'development'
+      ? [tailwindcss()]
+      : []
   },
 
   app: {
     head: {
       title: 'AWD',
-
-      htmlAttrs: {
-        lang: 'es'
-      },
-
+      htmlAttrs: { lang: 'es' },
       meta: [
-        { name: 'description', content: 'Portafolio front-end de AWD, mostrando proyectos y habilidades.' }
+        {
+          name: 'description',
+          content: 'Portafolio front-end de AWD, mostrando proyectos y habilidades.'
+        }
       ],
-
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/logo.png' }
       ]
