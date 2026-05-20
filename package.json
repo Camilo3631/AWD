@@ -1,5 +1,5 @@
 {
-  "name": "AWD",
+  "name": "awd",
   "type": "module",
   "private": true,
   "scripts": {
@@ -7,23 +7,32 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test:unit": "vitest"
   },
   "dependencies": {
     "@nuxt/content": "^3.8.2",
     "@nuxt/eslint": "^1.10.0",
     "@nuxt/image": "^2.0.0",
-    "@nuxt/test-utils": "^3.20.1",
     "@nuxt/ui": "^4.2.1",
     "@nuxtjs/i18n": "^10.2.1",
     "@tailwindcss/vite": "^4.1.17",
     "better-sqlite3": "^12.4.6",
     "eslint": "^9.39.1",
     "lucide-vue-next": "^0.554.0",
-    "nuxt": "^4.2.1",
     "tailwindcss": "^4.1.17",
-    "typescript": "^5.9.3",
     "vue": "^3.5.24",
     "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "^4.0.0",
+    "@types/node": "^25.5.0",
+    "@vitejs/plugin-vue": "^6.0.5",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^20.8.4",
+    "jsdom": "^28.1.0",
+    "nuxt": "^4.4.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
   }
 }

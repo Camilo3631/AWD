@@ -1,6 +1,6 @@
 <template>
   <section class="w-full text-center flex flex-col justify-center items-center p-6">
-    <h1 class="text-4xl font-bold mb-8">{{ $t('Projects') }}</h1>
+    <h1 class="text-4xl  mb-8">{{ $t('Projects') }}</h1>
 
     <!-- Grid de proyectos --> 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">

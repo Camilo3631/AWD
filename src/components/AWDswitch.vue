@@ -19,67 +19,48 @@
   </div>
 </template>
 
-<script setup>
+
+<script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 
-// Props y emisión
 defineProps({
-    modelValue: {
-        type: Boolean,
-        default: true  
-    }
+  modelValue: { type: Boolean, default: true }
 })
 const emit = defineEmits(['update:modelValue'])
 
-// Estado del toggle: true = día, false = noche
 const isOn = ref(true)
 
-// Función para cambiar tema
-const toggle = () => {
-    isOn.value = !isOn.value
-    if (isOn.value) {
-        document.body.classList.add('light')
-        document.body.classList.remove('dark')
-        localStorage.setItem('theme', 'light')
-
-    } else {
-        document.body.classList.add('dark')
-        document.body.classList.remove('light')
-        localStorage.setItem('theme', 'dark')
-         
-    }
+const applyTheme =  (theme: 'light' | 'dark') => {
+   document.body.classList.toggle('light', theme === 'light')
+   document.body.classList.toggle('dark', theme === 'dark')
 }
 
-// Observa cambios y emite a v-model
+
+const toggle = () => {
+     isOn.value = !isOn.value
+
+     const theme = isOn.value ? 'light'  : 'dark'
+     applyTheme(theme)
+     localStorage.setItem('theme', theme)
+}
+
+
 watch(() => isOn.value, (val) => emit('update:modelValue', val))
 
-// Inicializar estado según localStorage o hora actual
 onMounted(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-        if (saved === 'dark') {
-            isOn.value = false
-            document.body.classList.add('dark')
-            document.body.classList.remove('light')
-        } else {
-            isOn.value = true
-            document.body.classList.add('light')
-            document.body.classList.remove('dark')
-        }
-    } else {
-        // Si no hay valor guardado, usar hora actual
-        const hour = new Date().getHours()
-        if (hour >= 6 && hour < 18) { // Día: 6AM a 6PM
-            isOn.value = true
-            document.body.classList.add('light')
-            document.body.classList.remove('dark')
-        } else { // Noche
-            isOn.value = false
-            document.body.classList.add('dark')
-            document.body.classList.remove('light')
-        }
-    }
+  const saved = localStorage.getItem('theme')
+
+  const theme = 
+    saved ||
+    (new Date().getHours() >= 6 && new Date().getHours() < 18
+     ? 'light'
+     : 'dark')
+
+     isOn.value = theme === 'light'
+
+     applyTheme(theme as 'light' | 'dark')
+
 })
+
+defineExpose({ isOn, toggle })
 </script>
-
-

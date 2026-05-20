@@ -3,7 +3,11 @@
     "header.poryects": "Proyectos",
     "header.contac": "Contacto",
     "heroText1": "Hola, soy Camilo Acosta",
+<<<<<<< HEAD
     "heroText2": "Desarrollador Front-end creando aplicaciones web elegantes y funcionales.",
+=======
+    "heroText2": "Desarrollador Front-end enfocado en crear aplicaciones web elegantes y funcionales.",
+>>>>>>> feature_i18n-locale
     "feature.proyects": "Proyectos destacados",
     "projects.viewLive": "Ver en vivo",
     "projects.viewGit": "Ver en Github",
@@ -28,5 +32,7 @@
     "form.errors.messageMin": "El mensaje debe tener al menos 10 caracteres",
     "form.success": "Gracias por contactarme. Te responderé pronto.",
     "form.fail": "Error al enviar el mensaje. Intenta de nuevo.",
-    "Projects": "Proyectos"
+    "Projects": "Proyectos",
+    "placeholder.message": "Escribe tu mensaje",
+    "email_placeholder": "Correo{'@'}ejemplo.com"
 }

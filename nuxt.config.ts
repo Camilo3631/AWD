@@ -18,14 +18,17 @@ export default defineNuxtConfig({
   ],
 
   i18n: {
-    defaultLocale: 'en',
+    strategy: 'prefix',
     locales: [
       { code: 'es', name: 'Español', file: 'es.json' },
       { code: 'en', name: 'English', file: 'en.json' },
     ]
   },
 
+
+
   css: ['~/assets/css/main.css'],
+
 
   vite: {
     plugins: [tailwindcss()]

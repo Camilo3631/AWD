@@ -31,7 +31,7 @@
            type="email"
            id="email"
            v-model="form.email"
-           placeholder="correo@ejemplo.com"
+            :placeholder="$t('email_placeholder')" 
            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3 focus:border-indigo-500 focus:ring-indigo-500
            text-xl"
            />
@@ -46,7 +46,7 @@
         id="message"
         v-model="form.message"
         rows="6"
-        placeholder="Escribe tu mensaje"
+       :placeholder="$t('placeholder.message')"
         class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-3
         focus:border-indigo-500 focus:ring-indigo-500 text-lg"
         ></textarea>
