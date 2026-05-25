@@ -3,16 +3,13 @@
      <h1 class="text-3xl font-bold mb-8 text-center text-white">{{ $t('from.contact') }}</h1>
 
      <form
-      :action="formspreeURL" 
-      method="POST"
       @submit.prevent="handleSubmit"
       class="space-y-6"
       >
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        
-       <!-- Nombre -->
+   
       <div>
         <label for="name" class="block text-lg font-medium text-white mb-2">{{ $t('from.name') }}</label>
         <input
@@ -24,7 +21,7 @@
           <p v-if="errors.name" class="text-red-600 text-sm mt-2">{{ errors.name }}</p>
       </div>
 
-      <!-- Correo -->
+  
        <div>
          <label for="email" class="block text-lg font-medium text-white mb-2">{{ $t('from.email') }}</label>
          <input
@@ -39,7 +36,7 @@
        </div>
       </div>
 
-      <!-- Mensaje -->
+
       <div>
        <label for="message" class="block text-lg font-medium text-white mb-2">{{ $t('from.message') }}</label>
        <textarea
@@ -71,81 +68,91 @@
  </section>
 </template>
 
-<script setup>
-import { reactive, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
 
-const { t } = useI18n()
+<script setup>
+import { reactive, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const form = reactive({
   name: '',
   email: '',
   message: ''
 })
-
+ 
 const errors = reactive({
   name: '',
   email: '',
   message: ''
 })
 
-const successMessage = ref('')
-const isSubmitting = ref(false)
-
-const formspreeURL = 'https://formspree.io/f/XXXXXXX' // reemplaza con tu ID
+const successMessage = ref('');
+const isSubmitting = ref(false);
 
 const validate = () => {
-  let valid = true
+   let valid = true;
 
-  if (!form.name.trim()) {
-    errors.name = t('form.errors.nameRequired')
-    valid = false
-  } else errors.name = ''
+    if (!form.name) {
+      errors.name = t('form.errors.nameRequired');
+      valid = false;
+    } else {
+       errors.name = '' 
+    }
 
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  if (!form.email.trim()) {
-    errors.email = t('form.errors.emailRequired')
-    valid = false
-  } else if (!emailPattern.test(form.email)) {
-    errors.email = t('form.errors.emailInvalid')
-    valid = false
-  } else errors.email = ''
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!form.email) {
+      errors.email = t('form.errors.emailRequired');
+      valid = false;
+    } else if (!emailPattern.test(form.email)) {
+       errors.email = t('form.errors.emailInvalid')
+       valid = false;
+    } else errors.email = ''
 
-  if (!form.message.trim()) {
-    errors.message = t('form.errors.messageRequired')
-    valid = false
-  } else if (form.message.length < 10) {
-    errors.message = t('form.errors.messageMin')
-    valid = false
-  } else errors.message = ''
+    if (!form.message.trim()) {
+        errors.message = t('form.errors.messageRequired')
+        valid = false;
+    } else if (form.message.length < 10) {
+       errors.message = t('form.errors.messageMin')
+       valid = false;
+    } else {
+      errors.message = ''
+    }
 
-  return valid
+    return valid;
 }
 
 const handleSubmit = async () => {
-  if (!validate()) return
+   if (!validate()) return
 
-  isSubmitting.value = true
-  try {
-    const response = await fetch(formspreeURL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form)
-    })
+   isSubmitting.value = true
 
-    if (response.ok) {
-      successMessage.value = t('form.success')
-      form.name = ''
-      form.email = ''
-      form.message = ''
-    } else {
-      successMessage.value = t('form.fail')
+   try {
+     const response = await $fetch('/api/send-email', {
+       method: 'POST',
+       body: {
+          name: form.name,
+          email: form.email,
+          message: form.message
+       }
+     })
+
+     if (response.ok) {
+       successMessage.value = t('form.success')
+
+       form.name = '',
+       form.email = '',
+       form.message = ''
+     } else {
+       successMessage.value = t('form.fail')
+     }
+
+    } catch (error) {
+      successMessage.value = t('form.fil')
     }
-  } catch (error) {
-    console.error(error)
-    successMessage.value = t('form.fail')
-  } finally {
+
     isSubmitting.value = false
-  }
-}
+} 
+
+ 
 </script>

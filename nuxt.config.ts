@@ -7,10 +7,6 @@ export default defineNuxtConfig({
 
   ssr: false,
 
-  nitro: {
-    preset: 'static'
-  },
-
   modules: [
     '@nuxt/content',
     '@nuxt/image',
@@ -30,11 +26,8 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  // 🔥 FIX IMPORTANTE
-  vite: {
-    plugins: process.env.NODE_ENV === 'development'
-      ? [tailwindcss()]
-      : []
+ vite: {
+    plugins: [tailwindcss()]
   },
 
   app: {
