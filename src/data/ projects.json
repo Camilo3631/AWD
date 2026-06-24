@@ -6,7 +6,7 @@
             "es": "Aplicación de aprendizaje de idiomas multilenguaje con soporte para 6 idiomas, basada en frases completas, sistema de vidas, niveles dinámicos, progreso persistente guardado localmente y trofeo descargable al completar la ruta.",
             "en": "Multilingual language learning application supporting 6 languages, focused on full sentences, featuring a lives system, dynamic levels, locally stored persistent progress, and a downloadable trophy upon route completion."
         },
-        "liveLink": "https://lingostars.netlify.app",
+        "liveLink": "https://lingostrarts.netlify.app/",
         "gitLink": "https://github.com/Camilo3631/LingoStars",
         "image": "/img-proyects/LingoStarts.png"
     },
