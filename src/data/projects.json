@@ -6,7 +6,7 @@
             "es": "App de aprendizaje de idiomas multilenguaje (6 idiomas) enfocada en la práctica de frases completas. Incluye sistema de vidas, progreso persistente guardado localmente y trofeo descargable al completar una ruta.",
             "en": "Multilingual language learning app (6 languages) focused on full-sentence practice. Features a lives system, locally stored persistent progress, and a downloadable trophy upon route completion."
         },
-        "liveLink": "https://lingostrarts.netlify.app/",
+        "liveLink": "https://lingostars.netlify.app/",
         "gitLink": "https://github.com/Camilo3631/LingoStrarts",
         "image": "/img-proyects/LingoStarts.png"
     },
