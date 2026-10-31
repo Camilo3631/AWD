@@ -15,7 +15,7 @@
         </ul>
 
         <!-- Botón CV Compacto y redondeado -->
-         <a href="/Camio_Acosta.pdf" download class="flex justify-center items-center bg-gray-300 hover:bg-gray-400 text-base sm:text-lg text-black font-semibold py-2 px-4 sm:px-5 rounded-md transition-colors flex-shrink-0">
+         <a href="/camilo.pdf" download class="flex justify-center items-center bg-gray-300 hover:bg-gray-400 text-base sm:text-lg text-black font-semibold py-2 px-4 sm:px-5 rounded-md transition-colors flex-shrink-0">
           {{  $t('footer.downloadCV') }}
          </a>
       </div>
