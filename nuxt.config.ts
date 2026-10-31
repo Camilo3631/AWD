@@ -26,11 +26,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
- vite: {
+  vite: {
     plugins: [tailwindcss()]
   },
 
   app: {
+    buildAssetsDir: '/assets/',
     head: {
       title: 'AWD',
       htmlAttrs: { lang: 'es' },
