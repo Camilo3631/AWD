@@ -23,13 +23,13 @@
     },
     {
     "id": 3,
-    "name": "RazemConnect",
+    "name": "RazemContent",
     "description": {
         "es": "Aplicación de chat en tiempo real desarrollada con Vue 3 y Node.js, con autenticación mediante JWT y cookies HttpOnly, gestión de contactos, perfiles de usuario y comunicación mediante Socket.IO.",
         "en": "Real-time chat application built with Vue 3 and Node.js, featuring JWT authentication with HttpOnly cookies, contact management, user profiles, and Socket.IO communication."
     },
-    "liveLink": "https://razemconnect.vercel.app/",
-    "gitLink": "https://github.com/Camilo3631/RazemConnect",
+    "liveLink": "https://razemcontent.vercel.app/",
+    "gitLink": "https://github.com/Camilo3631/RazemContent",
     "image": "/img-proyects/RazemContent.png"
 }
 ]
